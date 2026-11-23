@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MAURYA TRAVELS | IATA Accredited Luxury & Corporate Travel Concierge – New Delhi</title>
+<meta name="description" content="Bespoke leisure holidays and seamless executive travel for discerning travellers. IATA accredited, New Delhi.">
+<meta name="theme-color" content="#111315">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      colors: { obsidian: '#111315', ivory: '#F9F8F6', gold: '#C5A059', slate2: '#4A4E54' },
+      fontFamily: { serif: ['Cormorant Garamond', 'serif'], sans: ['Plus Jakarta Sans', 'sans-serif'] }
+    } }
+  }
+</script>
+<style>
+  html { scroll-padding-top: 76px; }
+  body { font-family: 'Plus Jakarta Sans', sans-serif; color: #4A4E54; background: #F9F8F6; font-weight: 300; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; font-weight: 500; }
+  .track { letter-spacing: .28em; text-transform: uppercase; font-size: 11px; font-weight: 500; }
+  .ph { background: linear-gradient(135deg, #1b1e21, #3a3328); }
+  .hair { height: 1px; background: linear-gradient(90deg, #C5A059, transparent); }
+
+  /* reveal */
+  .fade { opacity: 0; transform: translateY(26px); transition: opacity 1.1s cubic-bezier(.2,.7,.2,1), transform 1.1s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0s); }
+  .fade.in { opacity: 1; transform: none; }
+  @keyframes slow { from { transform: scale(1.04); } to { transform: scale(1.16); } }
+  .slow-zoom { animation: slow 26s ease-in-out infinite alternate; }
+  @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+  .rise { opacity: 0; animation: rise 1.3s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: var(--d, 0s); }
+  @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(7px); } }
+
+  .imgwrap { overflow: hidden; }
+  .imgwrap img { transition: transform 1.4s cubic-bezier(.2,.7,.2,1); }
+  .xcard:hover .imgwrap img { transform: scale(1.06); }
+  .link-u { background: linear-gradient(#C5A059, #C5A059) 0 100% / 0 1px no-repeat; transition: background-size .5s ease; padding-bottom: 3px; }
+  .xcard:hover .link-u, .link-u:hover { background-size: 100% 1px; }
+
+  .fld { width: 100%; background: transparent; border: 0; border-bottom: 1px solid #cfcac0; padding: 14px 2px; color: #111315; font-size: 16px; font-weight: 300; border-radius: 0; }
+  .fld:focus { outline: none; border-color: #C5A059; }
+  .fld::placeholder { color: #9a968e; }
+  .fld-d { border-bottom-color: #3a3d41; color: #F9F8F6; }
+  .fld-d::placeholder { color: #7b7f85; }
+  select.fld option { color: #111315; }
+
+  .btn-gold { background: #C5A059; color: #111315; transition: all .4s ease; }
+  .btn-gold:hover { background: #d7b574; letter-spacing: .3em; }
+  .btn-line { border: 1px solid rgba(249,248,246,.55); color: #F9F8F6; transition: all .4s ease; }
+  .btn-line:hover { background: #F9F8F6; color: #111315; }
+
+  #modal { opacity: 0; pointer-events: none; transition: opacity .4s ease; }
+  #modal.open { opacity: 1; pointer-events: auto; }
+  #modal .sheet { transform: translateY(30px); transition: transform .5s cubic-bezier(.2,.7,.2,1); }
+  #modal.open .sheet { transform: none; }
+  #nav.solid { background: rgba(17,19,21,.92); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(197,160,89,.25); }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .fade, .rise { opacity: 1 !important; transform: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<script>
+  // ====== EDIT HERE ======
+  const WHATSAPP_NUMBER = "919999999999"; // country code + number, no "+" or spaces
+  const CONTACT_EMAIL   = "info@travelwithmaurya.com";
+  const PHONE_TEL       = "+911141528552";
+  // =======================
+  function waLink(msg) { return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg); }
+  function mailLink(subject, body) { return "mailto:" + CONTACT_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body); }
+</script>
+
+<!-- NAVBAR -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+  <nav class="max-w-7xl mx-auto px-5 h-[72px] flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="serif text-[22px] sm:text-2xl tracking-[.22em] text-ivory">MAURYA <span class="text-gold">TRAVELS</span></span>
+      <span class="hidden sm:inline-flex items-center gap-1.5 border border-gold/50 text-gold text-[9px] tracking-[.2em] px-2 py-1 uppercase"><i class="fa-solid fa-certificate text-[8px]"></i> IATA</span>
+    </a>
+    <div class="hidden lg:flex items-center gap-8 text-[12px] tracking-[.14em] uppercase text-ivory/80">
+      <a href="#philosophy" class="hover:text-gold transition">Philosophy</a>
+      <a href="#experiences" class="hover:text-gold transition">Experiences</a>
+      <a href="#edge" class="hover:text-gold transition">The Maurya Edge</a>
+      <a href="#corporate" class="hover:text-gold transition">Corporate &amp; Private</a>
+      <a href="#contact" class="hover:text-gold transition">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="#consult" class="hidden sm:inline-block border border-gold text-gold hover:bg-gold hover:text-obsidian text-[11px] tracking-[.2em] uppercase px-5 py-3 transition">Begin a Conversation</a>
+      <button id="menuBtn" class="lg:hidden w-10 h-10 text-ivory" aria-label="Menu"><i class="fa-solid fa-bars-staggered text-lg"></i></button>
+    </div>
+  </nav>
+  <div id="mobileMenu" class="hidden lg:hidden bg-obsidian/97 border-t border-gold/20">
+    <div class="px-6 py-6 flex flex-col gap-1 text-ivory/90 serif text-2xl">
+      <a href="#philosophy" class="py-3 border-b border-white/10">Philosophy</a>
+      <a href="#experiences" class="py-3 border-b border-white/10">Experiences</a>
+      <a href="#edge" class="py-3 border-b border-white/10">The Maurya Edge</a>
+      <a href="#corporate" class="py-3 border-b border-white/10">Corporate &amp; Private</a>
+      <a href="#contact" class="py-3 border-b border-white/10">Contact</a>
+      <a href="#consult" class="mt-5 text-center btn-gold track py-4">Begin a Conversation</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="relative min-h-[100svh] flex items-center ph overflow-hidden">
+  <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=2200&q=80" alt="Luxury resort at dusk" class="slow-zoom absolute inset-0 w-full h-full object-cover" onerror="this.onerror=function(){this.remove()};this.src='https://picsum.photos/seed/mauryahero/2000/1200'">
+  <div class="absolute inset-0 bg-gradient-to-b from-obsidian/80 via-obsidian/55 to-obsidian/90"></div>
+  <div class="relative max-w-7xl mx-auto px-5 w-full pt-28 pb-24">
+    <p style="--d:.2s" class="rise track text-gold">IATA Accredited &nbsp;•&nbsp; New Delhi</p>
+    <h1 style="--d:.5s" class="rise mt-6 text-ivory text-[2.9rem] leading-[1.02] sm:text-7xl lg:text-[6.4rem] max-w-5xl">Elevated Journeys.<br><em class="text-gold font-normal">Crafted</em> with Science &amp; Art.</h1>
+    <p style="--d:.9s" class="rise mt-7 text-ivory/80 text-base sm:text-lg max-w-xl leading-relaxed">Bespoke leisure holidays and seamless executive travel for discerning travellers — solo or with your circle.</p>
+    <div style="--d:1.2s" class="rise mt-10 flex flex-col sm:flex-row gap-4">
+      <a href="#consult" class="btn-gold track text-center px-9 py-4">Curate Your Journey</a>
+      <a href="#experiences" class="btn-line track text-center px-9 py-4">Explore Experiences</a>
+    </div>
+  </div>
+  <a href="#philosophy" aria-label="Scroll" class="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 text-gold/80 flex-col items-center gap-2" style="animation: bob 2s ease-in-out infinite"><span class="track text-[9px]">Scroll</span><i class="fa-solid fa-angle-down"></i></a>
+</section>
+
+<!-- PHILOSOPHY -->
+<section id="philosophy" class="py-24 sm:py-36 bg-ivory">
+  <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <div class="lg:col-span-7">
+      <p class="fade track text-gold">Who We Are</p>
+      <h2 class="fade mt-6 serif text-obsidian text-4xl sm:text-6xl leading-[1.08]" style="--d:.1s">“A great trip is both <em class="text-gold">science</em> and <em class="text-gold">art</em> — and we're very good at both.”</h2>
+      <div class="fade hair mt-10 w-40" style="--d:.2s"></div>
+      <p class="fade mt-8 max-w-xl leading-loose" style="--d:.25s">We are travel aficionados first, and an IATA accredited company second. We have always believed that the memory of a journey is shaped long before departure — by the quiet precision of its logistics, and by the imagination of its curation.</p>
+      <div class="mt-10 grid sm:grid-cols-2 gap-8 max-w-xl">
+        <div class="fade" style="--d:.3s">
+          <p class="serif text-3xl text-obsidian"><span class="text-gold">I.</span> The Science</p>
+          <p class="mt-2 text-sm leading-relaxed">Flawless flights, seamless transfers, accurate documentation and contingencies planned before they are needed.</p>
+        </div>
+        <div class="fade" style="--d:.4s">
+          <p class="serif text-3xl text-obsidian"><span class="text-gold">II.</span> The Art</p>
+          <p class="mt-2 text-sm leading-relaxed">Immersive curation: the right stay, the right table, the right hour of light — chosen for you, not for everyone.</p>
+        </div>
+      </div>
+    </div>
+    <div class="lg:col-span-5 relative">
+      <div class="fade imgwrap ph aspect-[4/5] lg:ml-8">
+        <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=1000&q=80" alt="Private villa with pool" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=function(){this.remove()};this.src='https://picsum.photos/seed/mauryavilla/1000/1250'">
+      </div>
+      <div class="fade hidden sm:block absolute -bottom-10 -left-4 w-44 aspect-square border-[10px] border-ivory imgwrap ph" style="--d:.2s">
+        <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=600&q=80" alt="Safari landscape" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=function(){this.remove()};this.src='https://picsum.photos/seed/mauryasafari/600/600'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCES -->
+<section id="experiences" class="pb-24 sm:pb-36 bg-ivory">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="max-w-2xl">
+      <p class="fade track text-gold">Curated Experiences</p>
+      <h2 class="fade mt-5 serif text-obsidian text-4xl sm:text-6xl leading-tight" style="--d:.1s">Journeys, composed <em class="text-gold">for you</em>.</h2>
+    </div>
+    <div class="mt-16 grid md:grid-cols-2 gap-x-10 gap-y-16">
+
+      <article class="xcard fade cursor-pointer" data-topic="Private & Bespoke Vacations" tabindex="0" role="button">
+        <div class="imgwrap ph aspect-[4/5]"><img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=1000&q=80" alt="Private yacht at sea" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=function(){this.remove()};this.src='https://picsum.photos/seed/mauryayacht/1000/1250'"></div>
+        <div class="pt-6 flex justify-between items-baseline"><span class="serif text-gold text-xl">01</span><span class="track text-[10px] text-slate2">Bespoke / On Request</span></div>
+        <h3 class="mt-2 serif text-obsidian text-3xl sm:text-4xl">Private &amp; Bespoke Vacations</h3>
+        <p class="mt-3 text-sm leading-relaxed max-w-md">Tailored itineraries across Europe, Japan, the Maldives and Africa — built around your pace, your taste and your calendar.</p>
+        <span class="link-u inline-block mt-5 track text-[11px] text-obsidian">Begin a conversation &nbsp;→</span>
+      </article>
+
+      <article class="xcard fade md:mt-24 cursor-pointer" data-topic="Executive & Corporate Travel" tabindex="0" role="button" style="--d:.1s">
+        <div class="imgwrap ph aspect-[4/5]"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1000&q=80" alt="Aircraft in flight" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=function(){this.remove()};this.src='https://picsum.photos/seed/mauryaair/1000/1250'"></div>
+        <div class="pt-6 flex justify-between items-baseline"><span class="serif text-gold text-xl">02</span><span class="track text-[10px] text-slate2">Bespoke / On Request</span></div>
+        <h3 class="mt-2 serif text-obsidian text-3xl sm:text-4xl">Executive &amp; Corporate Travel</h3>
+        <p class="mt-3 text-sm leading-relaxed max-w-md">Seamless IATA-backed flight logistics and luxury business stays, so every meeting begins composed and on time.</p>
+        <span class="link-u inline-block mt-5 track text-[11px] text-obsidian">Begin a conversation &nbsp;→</span>
+      </article>
+
+      <article class="xcard fade cursor-pointer" data-topic="Solo & Circle Escapes" tabindex="0" role="button">
+        <div class="imgwrap ph aspect-[4/5]"><img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1000&q=80" alt="Quiet temple in Japan" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=function(){this.remove()};this.src='https://picsum.photos/seed/mauryajapan/1000/1250'"></div>
+        <div class="pt-6 flex justify-between items-baseline"><span class="serif text-gold text-xl">03</span><span class="track text-[10px] text-slate2">Bespoke / On Request</span></div>
+        <h3 class="mt-2 serif text-obsidian text-3xl sm:text-4xl">Solo &amp; Circle Escapes</h3>
+        <p class="mt-3 text-sm leading-relaxed max-w-md">Curated journeys for solo explorers, families and close-knit groups — private where you wish, shared where it matters.</p>
+        <span class="link-u inline-block mt-5 track text-[11px] text-obsidian">Begin a conversation &nbsp;→</span>
+      </article>
+
+      <article class="xcard fade md:mt-24 cursor-pointer" data-topic="Rare Access & Culinary Journeys" tabindex="0" role="button" style="--d:.1s">
+        <div class="imgwrap ph aspect-[4/5]"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=80" alt="Fine dining table" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=function(){this.remove()};this.src='https://picsum.photos/seed/mauryadine/1000/1250'"></div>
+        <div class="pt-6 flex justify-between items-baseline"><span class="serif text-gold text-xl">04</span><span class="track text-[10px] text-slate2">Bespoke / On Request</span></div>
+        <h3 class="mt-2 serif text-obsidian text-3xl sm:text-4xl">Rare Access &amp; Culinary Journeys</h3>
+        <p class="mt-3 text-sm leading-relaxed max-w-md">Private openings, hidden stays and insider experiences — the tables, doors and moments that are not listed anywhere.</p>
+        <span class="link-u inline-block mt-5 track text-[11px] text-obsidian">Begin a conversation &nbsp;→</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- THE MAURYA EDGE -->
+<section id="edge" class="relative py-24 sm:py-36 bg-obsidian overflow-hidden">
+  <div class="absolute -top-40 -right-40 w-[34rem] h-[34rem] rounded-full bg-gold/10 blur-3xl"></div>
+  <div class="relative max-w-7xl mx-auto px-5">
+    <div class="max-w-2xl">
+      <p class="fade track text-gold">Why Travel With Us</p>
+      <h2 class="fade mt-5 serif text-ivory text-4xl sm:text-6xl leading-tight" style="--d:.1s">The Maurya <em class="text-gold">Edge</em></h2>
+      <p class="fade mt-6 text-ivory/60 leading-loose max-w-lg" style="--d:.2s">Four commitments that shape every journey we compose.</p>
+    </div>
+    <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 border-t border-white/10">
+      <div class="fade group p-8 border-b border-white/10 lg:border-r hover:bg-white/[.03] transition">
+        <span class="serif text-gold text-5xl">I</span>
+        <h3 class="mt-6 serif text-ivory text-2xl">Personalized Concierge</h3>
+        <div class="hair mt-5 w-12 group-hover:w-24 transition-all duration-700"></div>
+        <p class="mt-5 text-sm text-ivory/60 leading-relaxed">One dedicated advisor who learns how you travel — and plans every detail around it.</p>
+      </div>
+      <div class="fade group p-8 border-b border-white/10 lg:border-r hover:bg-white/[.03] transition" style="--d:.1s">
+        <span class="serif text-gold text-5xl">II</span>
+        <h3 class="mt-6 serif text-ivory text-2xl">Best Value-Adds</h3>
+        <div class="hair mt-5 w-12 group-hover:w-24 transition-all duration-700"></div>
+        <p class="mt-5 text-sm text-ivory/60 leading-relaxed">Thoughtful extras woven into each itinerary, so the journey gives more than it costs.</p>
+      </div>
+      <div class="fade group p-8 border-b border-white/10 lg:border-r hover:bg-white/[.03] transition" style="--d:.2s">
+        <span class="serif text-gold text-5xl">III</span>
+        <h3 class="mt-6 serif text-ivory text-2xl">Exclusive Ungooglable-Deals</h3>
+        <div class="hair mt-5 w-12 group-hover:w-24 transition-all duration-700"></div>
+        <p class="mt-5 text-sm text-ivory/60 leading-relaxed">Offers and arrangements that never surface in a search — shared only through our network.</p>
+      </div>
+      <div class="fade group p-8 border-b border-white/10 hover:bg-white/[.03] transition" style="--d:.3s">
+        <span class="serif text-gold text-5xl">IV</span>
+        <h3 class="mt-6 serif text-ivory text-2xl">Insider Access</h3>
+        <div class="hair mt-5 w-12 group-hover:w-24 transition-all duration-700"></div>
+        <p class="mt-5 text-sm text-ivory/60 leading-relaxed">Private openings, hidden stays and trusted people on the ground, wherever you land.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORPORATE & PRIVATE -->
+<section id="corporate" class="py-24 sm:py-32 bg-ivory">
+  <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-px bg-obsidian/10 border border-obsidian/10">
+    <div class="fade bg-ivory p-8 sm:p-14">
+      <p class="track text-gold">Corporate</p>
+      <h3 class="mt-4 serif text-obsidian text-3xl sm:text-4xl">Executive travel, without friction.</h3>
+      <p class="mt-4 text-sm leading-loose">IATA-backed flight logistics, considered business stays and a single point of contact for your leadership and teams.</p>
+      <a href="#consult" class="link-u inline-block mt-6 track text-[11px] text-obsidian">Discuss corporate travel &nbsp;→</a>
+    </div>
+    <div class="fade bg-ivory p-8 sm:p-14" style="--d:.1s">
+      <p class="track text-gold">Private</p>
+      <h3 class="mt-4 serif text-obsidian text-3xl sm:text-4xl">Holidays, composed with care.</h3>
+      <p class="mt-4 text-sm leading-loose">Whether you travel alone or with your circle, we shape an itinerary around what you love — and handle everything else.</p>
+      <a href="#consult" class="link-u inline-block mt-6 track text-[11px] text-obsidian">Plan a private journey &nbsp;→</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTATION -->
+<section id="consult" class="py-24 sm:py-36 bg-obsidian">
+  <div class="max-w-6xl mx-auto px-5 grid lg:grid-cols-5 gap-14">
+    <div class="lg:col-span-2">
+      <p class="fade track text-gold">Private Consultation</p>
+      <h2 class="fade mt-5 serif text-ivory text-4xl sm:text-5xl leading-tight" style="--d:.1s">Begin a <em class="text-gold">conversation</em>.</h2>
+      <p class="fade mt-6 text-ivory/60 leading-loose" style="--d:.2s">Tell us a little about how you like to travel. A member of our team will respond personally.</p>
+    </div>
+    <form id="consultForm" class="fade lg:col-span-3 grid gap-7" style="--d:.15s" novalidate>
+      <div class="grid sm:grid-cols-2 gap-7">
+        <input id="cName" class="fld fld-d" placeholder="Full name" autocomplete="name">
+        <input id="cContact" class="fld fld-d" placeholder="Email or phone" autocomplete="email">
+      </div>
+      <select id="cStyle" class="fld fld-d">
+        <option value="">Travel style</option>
+        <option>Personal Vacation</option>
+        <option>Corporate</option>
+        <option>Solo or Circle</option>
+      </select>
+      <textarea id="cIdea" rows="3" class="fld fld-d resize-none" placeholder="Preferred destination or idea"></textarea>
+      <p id="cErr" class="text-sm text-red-400 hidden"></p>
+      <div class="flex flex-col sm:flex-row gap-4 pt-2">
+        <button type="submit" class="btn-gold track px-9 py-4"><i class="fa-regular fa-envelope mr-2"></i>Send by Email</button>
+        <button type="button" id="cWa" class="btn-line track px-9 py-4"><i class="fa-brands fa-whatsapp mr-2"></i>WhatsApp Instead</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 sm:py-32 bg-ivory">
+  <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-14 items-center">
+    <div>
+      <p class="fade track text-gold">Contact &amp; Location</p>
+      <h2 class="fade mt-5 serif text-obsidian text-4xl sm:text-5xl leading-tight" style="--d:.1s">Visit us at the <em class="text-gold">World Trade Center</em>.</h2>
+      <div class="mt-10 space-y-8">
+        <div class="fade flex gap-5" style="--d:.15s"><i class="fa-solid fa-location-dot text-gold mt-1.5"></i><p class="leading-relaxed">69 LGF, World Trade Center,<br>Barakhamba Lane,<br>New Delhi – 110001, India</p></div>
+        <div class="fade flex gap-5" style="--d:.2s"><i class="fa-solid fa-phone text-gold mt-1.5"></i><a href="#" id="telLink" class="hover:text-gold transition">+91 11 41528552-54</a></div>
+        <div class="fade flex gap-5" style="--d:.25s"><i class="fa-regular fa-envelope text-gold mt-1.5"></i><a href="#" id="mailLink" class="hover:text-gold transition"></a></div>
+      </div>
+      <a href="https://www.google.com/maps/search/?api=1&query=World+Trade+Center+Barakhamba+Lane+New+Delhi+110001" target="_blank" rel="noopener" class="fade inline-block mt-10 border border-obsidian text-obsidian hover:bg-obsidian hover:text-ivory track px-8 py-4 transition" style="--d:.3s">Get Directions</a>
+    </div>
+    <div class="fade imgwrap ph aspect-[4/3] border border-obsidian/10" style="--d:.1s">
+      <iframe title="MAURYA TRAVELS location" class="w-full h-full" loading="lazy" style="filter: grayscale(.85) contrast(1.05)" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=World+Trade+Center,+Barakhamba+Lane,+New+Delhi+110001&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-obsidian text-ivory/60 text-xs">
+  <div class="max-w-7xl mx-auto px-5 py-12 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+    <div><p class="serif text-ivory text-2xl tracking-[.22em]">MAURYA <span class="text-gold">TRAVELS</span></p><p class="mt-1 track text-[9px] text-gold">IATA Accredited Travel Company</p></div>
+    <div class="flex gap-6 track text-[10px]"><a href="#philosophy" class="hover:text-gold">Philosophy</a><a href="#experiences" class="hover:text-gold">Experiences</a><a href="#consult" class="hover:text-gold">Consult</a></div>
+  </div>
+  <div class="border-t border-white/10 text-center py-5 px-4">Copyright © 2026 MAURYA TRAVELS — All Rights Reserved</div>
+</footer>
+
+<!-- INQUIRY MODAL -->
+<div id="modal" class="fixed inset-0 z-[60] flex items-end sm:items-center justify-center bg-obsidian/80 backdrop-blur-sm p-0 sm:p-6" aria-hidden="true">
+  <div class="sheet bg-ivory w-full max-w-lg p-8 sm:p-10 relative max-h-[92vh] overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <button id="mClose" class="absolute top-4 right-5 text-obsidian/60 hover:text-obsidian text-xl" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <p class="track text-gold">Private Inquiry</p>
+    <h3 id="mTitle" class="mt-3 serif text-obsidian text-3xl leading-tight"></h3>
+    <p class="mt-3 text-sm leading-relaxed">Share a few words and we will return with a considered proposal. Pricing: <b class="font-medium text-obsidian">Bespoke / On Request</b>.</p>
+    <div class="mt-6 grid gap-5">
+      <input id="mName" class="fld" placeholder="Your name">
+      <textarea id="mNote" rows="2" class="fld resize-none" placeholder="Destination, dates or an idea (optional)"></textarea>
+    </div>
+    <div class="mt-8 flex flex-col sm:flex-row gap-3">
+      <a id="mWa" href="#" target="_blank" rel="noopener" class="btn-gold track text-center px-6 py-4 flex-1"><i class="fa-brands fa-whatsapp mr-2"></i>WhatsApp</a>
+      <a id="mMail" href="#" class="border border-obsidian text-obsidian hover:bg-obsidian hover:text-ivory track text-center px-6 py-4 flex-1 transition"><i class="fa-regular fa-envelope mr-2"></i>Email</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  var $ = function (id) { return document.getElementById(id); };
+  $("telLink").href = "tel:" + PHONE_TEL;
+  $("mailLink").href = "mailto:" + CONTACT_EMAIL;
+  $("mailLink").textContent = CONTACT_EMAIL;
+
+  // Mobile menu
+  var menu = $("mobileMenu");
+  $("menuBtn").addEventListener("click", function () { menu.classList.toggle("hidden"); $("nav").classList.add("solid"); });
+  menu.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { menu.classList.add("hidden"); }); });
+
+  // Navbar solidifies on scroll
+  function onScroll() { $("nav").classList.toggle("solid", window.scrollY > 60 || !menu.classList.contains("hidden")); }
+  window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+  // Fade-in
+  (function () {
+    var els = document.querySelectorAll(".fade");
+    if (!("IntersectionObserver" in window)) { els.forEach(function (e) { e.classList.add("in"); }); return; }
+    var io = new IntersectionObserver(function (en) {
+      en.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+
+  // Experience modal
+  var modal = $("modal"), topic = "";
+  function updateModalLinks() {
+    var name = $("mName").value.trim() || "[Name]", note = $("mNote").value.trim() || "—";
+    var msg = "Hello MAURYA TRAVELS,\n\nI would like to enquire about: " + topic + "\n\nName: " + name + "\nIdea / Destination: " + note + "\n\nI look forward to hearing from you.";
+    $("mWa").href = waLink(msg);
+    $("mMail").href = mailLink("Enquiry – " + topic, msg);
+  }
+  function openModal(t) {
+    topic = t; $("mTitle").textContent = t; updateModalLinks();
+    modal.classList.add("open"); modal.setAttribute("aria-hidden", "false"); document.body.style.overflow = "hidden";
+  }
+  function closeModal() { modal.classList.remove("open"); modal.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; }
+  document.querySelectorAll(".xcard").forEach(function (c) {
+    c.addEventListener("click", function () { openModal(c.getAttribute("data-topic")); });
+    c.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openModal(c.getAttribute("data-topic")); } });
+  });
+  $("mClose").addEventListener("click", closeModal);
+  modal.addEventListener("click", function (e) { if (e.target === modal) closeModal(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeModal(); });
+  $("mName").addEventListener("input", updateModalLinks);
+  $("mNote").addEventListener("input", updateModalLinks);
+
+  // Consultation form
+  function consultMessage() {
+    return "Hello MAURYA TRAVELS,\n\nI would like to begin a conversation.\n\nName: " + $("cName").value.trim() +
+      "\nContact: " + $("cContact").value.trim() + "\nTravel style: " + $("cStyle").value +
+      "\nDestination / idea: " + ($("cIdea").value.trim() || "—") + "\n\nThank you.";
+  }
+  function consultValid() {
+    var ok = $("cName").value.trim() && $("cContact").value.trim() && $("cStyle").value;
+    $("cErr").textContent = ok ? "" : "Please share your name, a way to reach you, and your travel style.";
+    $("cErr").classList.toggle("hidden", !!ok);
+    return !!ok;
+  }
+  $("consultForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!consultValid()) return;
+    window.location.href = mailLink("Private Consultation – " + $("cStyle").value, consultMessage());
+  });
+  $("cWa").addEventListener("click", function () {
+    if (!consultValid()) return;
+    window.open(waLink(consultMessage()), "_blank");
+  });
+</script>
+</body>
+</html>
